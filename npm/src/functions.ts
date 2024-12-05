@@ -402,6 +402,8 @@ export async function setupSdk(options: ConfigOptions) {
     user = resolvedData.user;
 
     getChildIframe().contentWindow?.postMessage({ command: "LOADED", data: PACKAGE_VERSION }, "*");
+	
+	return { discordSdk, user };
 }
 
 //\ Use external data and setup bridge
